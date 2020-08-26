@@ -18,6 +18,7 @@ puts '-------------'
 # take input from player1
 puts 'Player 1, place X'
 player1 = gets.chomp.to_i
+# Validate input, if input is in (1..9)
 # update board
 board[player1 - 1] = 'X'
 # show board
@@ -35,6 +36,7 @@ puts '-------------'
 # take input from player2
 puts 'Player 2, place O'
 player2 = gets.chomp.to_i
+# Validate input, if input is in (1..9)
 # update board
 board[player2 - 1] = 'O'
 # show the board
