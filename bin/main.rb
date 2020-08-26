@@ -1,11 +1,13 @@
 #!/usr/bin/env ruby
+require_relative '../lib/game_logic.rb'
 
 # Welcome to Tic Tac Toe Game
 puts 'Welcome to Tic Tac Toe Game'
 
 # Display game board
 
-board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+b = Board.new
+board = b.board
 puts '-------------'
 puts "| #{board[0]} | #{board[1]} | #{board[2]} |"
 puts '-------------'
@@ -14,13 +16,15 @@ puts '-------------'
 puts "| #{board[6]} | #{board[7]} | #{board[8]} |"
 puts '-------------'
 
+player1 = Player.new("X")
+player2 = Player.new("O")
 # until board.winner or board.draw
 # take input from player1
 puts 'Player 1, place X'
-player1 = gets.chomp.to_i
+choice = gets.chomp.to_i
 # Validate input, if input is in (1..9)
 # update board
-board[player1 - 1] = 'X'
+b.update_board(player1.code, choice)
 # show board
 puts 'Your move is displayed on the board'
 puts '-------------'
@@ -35,10 +39,10 @@ puts '-------------'
 # else
 # take input from player2
 puts 'Player 2, place O'
-player2 = gets.chomp.to_i
+choice = gets.chomp.to_i
 # Validate input, if input is in (1..9)
 # update board
-board[player2 - 1] = 'O'
+b.update_board(player2.code, choice)
 # show the board
 puts 'Your move is displayed on the board'
 puts '-------------'
