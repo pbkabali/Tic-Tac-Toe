@@ -6,14 +6,13 @@ puts 'Welcome to Tic Tac Toe Game'
 # Display game board
 
 board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-puts "-------------"
+puts '-------------'
 puts "| #{board[0]} | #{board[1]} | #{board[2]} |"
-puts "-------------"
+puts '-------------'
 puts "| #{board[3]} | #{board[4]} | #{board[5]} |"
-puts "-------------"
+puts '-------------'
 puts "| #{board[6]} | #{board[7]} | #{board[8]} |"
-puts "-------------"
-
+puts '-------------'
 
 # Ask to Player 1 put X
 
@@ -24,13 +23,13 @@ board[player1 - 1] = 'X'
 # Display the X inside the board in player 1 choice
 
 puts 'Your move is displayed on the board'
-puts "-------------"
+puts '-------------'
 puts "| #{board[0]} | #{board[1]} | #{board[2]} |"
-puts "-------------"
+puts '-------------'
 puts "| #{board[3]} | #{board[4]} | #{board[5]} |"
-puts "-------------"
+puts '-------------'
 puts "| #{board[6]} | #{board[7]} | #{board[8]} |"
-puts "-------------"
+puts '-------------'
 
 # Ask to Player 2 put O
 
@@ -41,13 +40,13 @@ board[player2 - 1] = 'O'
 # Display the X inside the board in player 1 choice
 
 puts 'Your move is displayed on the board'
-puts "-------------"
+puts '-------------'
 puts "| #{board[0]} | #{board[1]} | #{board[2]} |"
-puts "-------------"
+puts '-------------'
 puts "| #{board[3]} | #{board[4]} | #{board[5]} |"
-puts "-------------"
+puts '-------------'
 puts "| #{board[6]} | #{board[7]} | #{board[8]} |"
-puts "-------------"
+puts '-------------'
 
 # Repeat user inputs until there is a winner
 
