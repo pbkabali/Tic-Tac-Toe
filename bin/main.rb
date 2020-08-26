@@ -20,8 +20,14 @@ player1 = Player.new("X")
 player2 = Player.new("O")
 until b.winner or b.draw
   # take input from player1
-  puts 'Player 1, place X'
-  choice = gets.chomp.to_i
+  choice = 0
+  until board.any?(choice)
+    puts 'Player 1. Place X'
+    puts 'Select a number between 1 and 9'
+    choice = gets.chomp.to_i
+    puts 'Invalid input' unless (1..9).any?(choice)
+    puts 'Position alreay taken!' unless board.any?(choice) && (1..9).any?(choice)
+  end
   # Validate input, if input is in (1..9)
   # update board
   b.update_board(player1.code, choice)
@@ -35,12 +41,18 @@ until b.winner or b.draw
   puts "| #{board[6]} | #{board[7]} | #{board[8]} |"
   puts '-------------'
   if b.winner
+    puts 'Winner is Player 1'
     break
   else
   # take input from player2
-    puts 'Player 2, place O'
-    choice = gets.chomp.to_i
-    # Validate input, if input is in (1..9)
+    choice = 0
+    until board.any?(choice)
+      puts 'Player 2. Place O'
+      puts 'Select a number between 1 and 9'
+      choice = gets.chomp.to_i
+      puts 'Invalid input' unless (1..9).any?(choice)
+      puts 'Position alreay taken!' unless board.any?(choice) && (1..9).any?(choice)
+    end
     # update board
     b.update_board(player2.code, choice)
     # show the board
@@ -52,12 +64,13 @@ until b.winner or b.draw
     puts '-------------'
     puts "| #{board[6]} | #{board[7]} | #{board[8]} |"
     puts '-------------'
+    puts 'Winner is Player 2' if b.winner
   end
 end
 
 #If Board.winner
 # check which player won
 # Announce the winner
-puts 'Winner is ____ ME'
+puts 'Congratulations'
 # Else
 # Announce draw
