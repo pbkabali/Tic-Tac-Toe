@@ -2,9 +2,12 @@ class Board
   attr_reader :board  
   def initialize
     @board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    @count = 0
   end
 
+
   def update_board(player, option)
+    @count += 1
     @board[option - 1] = player
   end
 
@@ -21,6 +24,7 @@ class Board
   end
 
   def draw
+    @count == 9
   end
 end
 
