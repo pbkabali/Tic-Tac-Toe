@@ -7,6 +7,21 @@ class Board
   def update_board(player, option)
     @board[option - 1] = player
   end
+
+  def winner
+    board_patterns = [[@board[0], @board[1], @board[2]],
+                      [@board[3], @board[4], @board[5]],
+                      [@board[6], @board[7], @board[8]],
+                      [@board[0], @board[3], @board[6]],
+                      [@board[1], @board[4], @board[7]],
+                      [@board[2], @board[5], @board[8]],
+                      [@board[0], @board[4], @board[8]],
+                      [@board[2], @board[4], @board[6]]]
+   board_patterns.any?(['X','X','X']) || board_patterns.any?(['O','O','O'])
+  end
+
+  def draw
+  end
 end
 
 class Player
