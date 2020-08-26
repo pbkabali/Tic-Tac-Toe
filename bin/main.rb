@@ -29,17 +29,17 @@ puts 'Welcome to Tic Tac Toe Game'
 b = Board.new
 board = b.board
 show_board(board)
-player1 = Player.new("X")
-player2 = Player.new("O")
+player1 = Player.new('X')
+player2 = Player.new('O')
 until b.winner || b.draw
-  choice = get_input('Player 1', 'X', board )
+  choice = get_input('Player 1', 'X', board)
   b.update_board(player1.code, choice)
   puts 'Your move is displayed on the board'
   show_board(board)
-  if b.winner 
+  if b.winner
     puts 'Winner is Player 1'
     break
-  elsif b.draw 
+  elsif b.draw
     break
   else
     choice = get_input('Player 2', 'O', board)
@@ -51,7 +51,7 @@ until b.winner || b.draw
 end
 
 if b.winner
-  puts 'Congratulations' 
+  puts 'Congratulations'
 else
   puts 'This game has ended in a draw'
 end
