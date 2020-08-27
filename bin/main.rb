@@ -21,7 +21,7 @@ def get_input(player, code, board)
     if (1..9).none?(choice)
       puts 'Invalid input'
     elsif board.none?(choice)
-      puts 'Position alreay taken!'
+      puts 'Position already taken!'
     end
   end
   choice
