@@ -20,7 +20,7 @@ def get_input(player, code, board)
     choice = gets.chomp.to_i
     if (1..9).none?(choice)
       puts 'Invalid input'
-    elsif board.none?(choice) && (1..9).none?(choice)
+    elsif board.none?(choice)
       puts 'Position alreay taken!'
     end
   end
@@ -33,12 +33,12 @@ board = b.board
 show_board(board)
 player1 = Player.new('X')
 player2 = Player.new('O')
-until b.winner || b.draw
+until b.winner(b.winner_pattern) || b.draw
   choice = get_input('Player 1', 'X', board)
   b.update_board(player1.code, choice)
   puts 'Your move is displayed on the board'
   show_board(board)
-  if b.winner
+  if b.winner(b.winner_pattern)
     puts 'Winner is Player 1'
     break
   elsif b.draw
@@ -48,11 +48,11 @@ until b.winner || b.draw
     b.update_board(player2.code, choice)
     puts 'Your move is displayed on the board'
     show_board(board)
-    puts 'Winner is Player 2' if b.winner
+    puts 'Winner is Player 2' if b.winner(b.winner_pattern)
   end
 end
 
-if b.winner
+if b.winner(b.winner_pattern)
   puts 'Congratulations'
 else
   puts 'This game has ended in a draw'
