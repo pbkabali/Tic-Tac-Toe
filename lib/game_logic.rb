@@ -26,10 +26,3 @@ class Board
     @count == 9
   end
 end
-
-class Player
-  attr_reader :code
-  def initialize(code)
-    @code = code
-  end
-end

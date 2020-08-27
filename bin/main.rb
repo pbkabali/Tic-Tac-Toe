@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 require_relative '../lib/game_logic.rb'
+require_relative '../lib/player.rb'
 
 def show_board(board)
   puts '-------------'
@@ -14,13 +15,14 @@ end
 def get_input(player, code, board)
   choice = 0
   until board.any?(choice)
-    puts "#{player}. Place #{code}"
+    puts "#{player}. Choose a position to place an #{code}"
     puts 'Select a number between 1 and 9'
     choice = gets.chomp.to_i
-    puts 'Invalid input' unless (1..9).any?(choice)
-
-    puts 'Position alreay taken!' unless board.any?(choice) && (1..9).any?(choice)
-
+    if (1..9).none?(choice)
+      puts 'Invalid input'
+    elsif board.none?(choice) && (1..9).none?(choice)
+      puts 'Position alreay taken!'
+    end
   end
   choice
 end
