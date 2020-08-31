@@ -11,6 +11,7 @@ A player wins the game by placing 3 symbols (either X or O) in line.
 
 - Ruby,
 - Rubocop
+- RSpec
 
 ## Getting Started
 
@@ -18,11 +19,11 @@ To get a local copy up and running follow these simple example steps:
 
 - Clone the project from [here](https://github.com/pbkabali/Tic-Tac-Toe)
 
-
 ### Prerequisites
 
 - Ruby 2.7.x
 - Terminal
+- Rspec
 
 ### Setup
 
@@ -32,10 +33,16 @@ Run `./bin/main.rb`
 ### Install
 
 #### Ruby:
+
 To install Ruby go to this [page](https://www.ruby-lang.org/en/) and follow the instructions given.
 
 #### Rubocop:
+
 Run `gem install rubocop`
+
+#### Rspec:
+
+Run `gem install rspec`
 
 ### Usage (Game instructions)
 
@@ -48,6 +55,10 @@ Run `gem install rubocop`
 - The players will continue entering selections in turns until there is a winner or the game ends in a draw.
 - The winner will be the first player who places three symbols in a line. The line could be horizontal, vertical or diagonal.
 
+### Run Tests
+
+Run `rspec` from the project root directory
+
 ## Authors
 
 👤 **Paul Balitema Kabali**
@@ -59,8 +70,14 @@ Run `gem install rubocop`
 👤 **Jhonatan Sarrazola**
 
 - Github: [@jssarrazolaa](https://github.com/jssarrazolaa)
-- Twitter: [@StevenAlvarez_](https://twitter.com/StevenAlvarez_)
+- Twitter: [@StevenAlvarez\_](https://twitter.com/StevenAlvarez_)
 - Linkedin: [Jhonatan Sarrazola](https://www.linkedin.com/in/jhonatan-sarrazola-6a46a01a5/)
+
+👤 **Stanley Enow Lekunze**
+
+- Github: [@happiguru](https://github.com/happiguru)
+- Twitter: [@Lekunze_Nley](https://twitter.com/Lekunze_Nley)
+- Linkedin: [lekunze-nley](https://www.linkedin.com/in/lekunze-nley/)
 
 ## 🤝 Contributing
 
