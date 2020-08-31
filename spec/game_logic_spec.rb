@@ -25,5 +25,15 @@ describe Board do
       expect(b.winner(b.winner_pattern)). to eql(true)
     end
   end
+
+  describe '#winner' do
+    it 'returns false if there is no winning pattern on the board' do
+      b = Board.new
+      b.update_board("X", 1)
+      b.update_board("X", 5)
+      b.update_board("X", 7)
+      expect(b.winner(b.winner_pattern)). to eql(false)
+    end
+  end
 end
 
