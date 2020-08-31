@@ -28,8 +28,8 @@ describe Board do
       b.update_board('X', 1)
       b.update_board('X', 4)
       b.update_board('X', 7)
-      expect(b.winner_pattern). to eql([['X', 2, 3], ['X', 8, 9], ['X', 5, 6], ['X', 'X', 'X'],
-        [2, 5, 8], [3, 6, 9], ['X', 5, 9], [3, 5, 'X']])
+      expect(b.winner_pattern). to eql([['X', 2, 3], ['X', 8, 9], ['X', 5, 6], %w[X X X],
+                                        [2, 5, 8], [3, 6, 9], ['X', 5, 9], [3, 5, 'X']])
     end
   end
 
